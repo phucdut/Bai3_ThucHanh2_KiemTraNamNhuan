@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Nam Nhuan</title>
+</head>
+<body>
+<h4>Enter a year</h4>
+<input id="InputYear" type="text" />
+
+<button id="year" type="button">Kiểm tra</button>
+</body>
+</html>
+<script>
+    document.getElementById('year').onclick =
+        function getValue() {
+            let a = +document.getElementById('InputYear').value;
+            if(a % 4 == 0 && a % 100 != 0){
+                document.write('Năm ' + a + ' là năm nhuận.')
+            }else if(a % 100 == 0 && a % 400 != 0){
+                document.write('Năm ' + a + ' không là năm nhuận.')
+            }else if(a % 100 == 0 && a % 400 == 0){
+                document.write('Năm ' + a + ' là năm nhuận.')
+            }
+
+        }
+</script>
